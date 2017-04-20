@@ -28,9 +28,9 @@ __Primitive types: special values__
 4. __undefined (void)__
 5. __+0, -0__
 
-Let's have a look at **NaN**.
-Supposedly NaN stands for “Not a Number”. Any time you try to take a value and convert it to a number and that conversion fails the resultant value is to tell you “this was an invalid number”.
-Whatever operation you try to do with NaN, NaN is going to come out.
+Let's have a look at **NaN**.  
+Supposedly NaN stands for “Not a Number”. Any time you try to take a value and convert it to a number and that conversion fails the resultant value is to tell you “this was an invalid number”.  
+Whatever operation you try to do with NaN, NaN is going to come out.  
 `typeof NaN; // “number”`
 `NaN === NaN; // false` (NaN is never equal to its self)
 So to check if a value is NaN we have the function isNaN:
