@@ -31,12 +31,12 @@ __Primitive types: special values__
 Let's have a look at **NaN**.  
 Supposedly NaN stands for “Not a Number”. Any time you try to take a value and convert it to a number and that conversion fails the resultant value is to tell you “this was an invalid number”.  
 Whatever operation you try to do with NaN, NaN is going to come out.  
-`typeof NaN; // “number”`
-`NaN === NaN; // false` (NaN is never equal to its self)
-So to check if a value is NaN we have the function isNaN:
-`isNaN(NaN); // true`
-But,
-`isNaN("foo”); // true` this is a bug because if you pass something that is not already a number to isNaN it is trying to convert this value to a number first and then test to see if it resulted into NaN. So by the time isNaN checks the value “foo” is already NaN. Fatal flaw!
+`typeof NaN; // “number”`  
+`NaN === NaN; // false` (NaN is never equal to its self)  
+So to check if a value is NaN we have the function isNaN:  
+`isNaN(NaN); // true`  
+But,  
+`isNaN("foo”); // true` this is a bug because if you pass something that is not already a number to isNaN it is trying to convert this value to a number first and then test to see if it resulted into NaN. So by the time isNaN checks the value “foo” is already NaN. Fatal flaw!  
 To fix that bug we can use the following:
 ```
 if (!Number.isNaN) {
@@ -46,15 +46,15 @@ if (!Number.isNaN) {
 }
 ```
 
-Let's have a look at **+0 and -0** now.
-`var foo = 0 / -3;`
-`foo === -0; // true`
-`foo === 0; // true`
-`0 === -0; // true`
-`(0/-3) === (0/3); // true`
-`foo; // 0`
-There are no negative literals in JS.
-JS parses “negative literals” as: the literal, then it’s operated on the unary negate - operator.
+Let's have a look at **+0 and -0** now.  
+`var foo = 0 / -3;`  
+`foo === -0; // true`  
+`foo === 0; // true`  
+`0 === -0; // true`  
+`(0/-3) === (0/3); // true`  
+`foo; // 0`  
+There are no negative literals in JS.  
+JS parses “negative literals” as: the literal, then it’s operated on the unary negate - operator.  
 
 The explanation of `0 === -0; // true` from the JS specs is:
 ```
