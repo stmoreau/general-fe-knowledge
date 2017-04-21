@@ -1,15 +1,15 @@
 # Advanced Javascript (from my point of view)
 
-In this markdown I am gonna be throwing interesting information about Javascript that I experience / read.
+In this markdown I am going to be throwing interesting information about Javascript that I have experienced / read.
 
-So, first of all something very important is that the web console, node etc. are JavaScript-like. They are not behaving as the core Javascript spec expects. The only way to do that is to write Javascript on an empty file and run it on the browser!
+So, first of all something __very important__ is that the web console, node etc. are JavaScript-like. They are not behaving as the core Javascript spec expects. The only way to do that is to write Javascript on an empty file and run it on the browser!
 
 ## Primitive Types
 
-In a statically typed language (C++, Java) we refer to a type as a description for what can go in a variable.
-In dynamic languages (Javascript) we think of types as __value-types__ instead of ~~container-types~~.
+In a statically typed language (e.g. C++, Java) we refer to a type as a description for what can go in a variable.
+In dynamic languages (e.g. Javascript) we think of types as __value-types__ instead of ~~container-types~~.
 
-So a pragmatic definition of Primitive Type (which is mentioned in the JS spec for the non-believers of its existence in Javascript) could be the following: *the set of intrinsic behaviours that we can expect, given any particular realm*.
+So a pragmatic definition of Primitive Type (which is mentioned in the JS spec for the non-believers of its existence in Javascript) could be the following: __the set of intrinsic behaviours that we can expect, given any particular realm__.
 
 __Primitive types__
 1. __undefined__ (it is not the same with “not defined”. Not defined in JS means not declared. undefined means the variable exists but doesn’t have any value at the moment)
@@ -18,8 +18,8 @@ __Primitive types__
 4. __boolean__
 5. __object__
 6. __symbol__ (new in ECMAScript 6)
-7. __function__ (not in the specs, not a real first class primitive type. It is actually a subset of the object type, mentioned as *callable object*)
-8. __null__ (not in the specs, definitely true that null is a primitive type. The fact that ` typeof null; // “object” ` is a bug admitted by Brendan Eich creator of the Javascript language several times. Bad thing is it cannot be fixed)
+7. __function__ (not in the specs, not a real first class primitive type. It is actually a subset of the object type, mentioned as a *callable object*)
+8. __null__ (not in the specs, definitely true that null is a primitive type. The fact that ` typeof null; // “object” ` is a bug admitted by __Brendan Eich__ creator of the Javascript language several times. Bad thing is it cannot be fixed)
 
 __Primitive types: special values__
 1. __NaN__
@@ -36,7 +36,7 @@ Whatever operation you try to do with NaN, NaN is going to come out.
 So to check if a value is NaN we have the function isNaN:  
 `isNaN(NaN); // true`  
 But,  
-`isNaN("foo”); // true` this is a bug because if you pass something that is not already a number to isNaN it is trying to convert this value to a number first and then test to see if it resulted into NaN. So by the time isNaN checks the value “foo” is already NaN. Fatal flaw!  
+`isNaN("foo”); // true` this is a bug because if you pass something that is not already a number to isNaN it is trying to convert this value to a number first and then test to see if it resulted into NaN. So by the time isNaN checks the value “foo” it's already NaN. Fatal flaw!  
 To fix that bug we can use the following:
 ```
 if (!Number.isNaN) {
