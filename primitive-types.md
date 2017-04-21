@@ -51,14 +51,14 @@ There are no negative literals in JS.
 JS parses “negative literals” as: the literal, then it’s operated on the unary negate - operator.  
 
 The explanation of `0 === -0; // true` from the JS specs is:
-```
-The comparison x === y, where x and y are values, produces true or false. Such a comparison is performed as follows:
-
-....
-- If x is +0 and y is −0, return true.
-- If x is −0 and y is +0, return true.
-...
-```
+>
+> The comparison x === y, where x and y are values, produces true or false. Such a comparison is performed as follows:
+>
+> ....
+> - If x is +0 and y is −0, return true.
+> - If x is −0 and y is +0, return true.
+> ...
+>
 
 A *Reliable check for Negative Zero* is the following:
 

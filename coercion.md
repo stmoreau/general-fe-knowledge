@@ -23,7 +23,8 @@ __ToString__ examples
 ```
 
 __Aside__  
-Javascript spec: `Edition 5 clarifies the fact that a trailing comma at the end of an ArrayInitialiser does not add to the length of the array`
+Javascript spec:  
+> Edition 5 clarifies the fact that a trailing comma at the end of an ArrayInitialiser does not add to the length of the array
 
 __ToNumber__ examples
 ```
