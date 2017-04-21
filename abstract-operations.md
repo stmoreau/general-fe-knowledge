@@ -55,7 +55,7 @@ ToNumber(object)  ToPrimitive(number)
 
 ```
 
-Falsy : if you have a value and you dispatch the ToBoolean operation on it, it will always produce false  
+Falsy : if you have a value and you dispatch the ToBoolean abstract operation on it, it will always produce false  
 examples and __only__ falsy values (__"", 0, +0, -0, null, NaN, false, undefined__)
 
 Truthy : something is a truthy value if it's not on the Falsy list

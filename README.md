@@ -4,7 +4,7 @@ In this markdown I am going to be throwing interesting information about Javascr
 
 So, first of all something __very important__ is that the web console, node etc. are JavaScript-like. They are not behaving as the core Javascript spec expects. The only way to do that is to write Javascript on an empty file and run it on the browser!
 
-Second of all always have the ["Official Javascript Specs"](http://www.ecma-international.org/ecma-262/5.1/) opened on a tab and visit it every time you have a doubt about something.
+Second of all always have the ["Official Javascript Specs"](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) opened on a tab and visit it every time you have a doubt about something.
 
 You can follow the order in which I wrote them or just jump to the subject that interests you the most:
 
