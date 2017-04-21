@@ -60,11 +60,10 @@ The explanation of `0 === -0; // true` from the JS specs is:
 ```
 The comparison x === y, where x and y are values, produces true or false. Such a comparison is performed as follows:
 
-If Type(x) is Number, then
-    ....
-    - If x is +0 and y is −0, return true.
-    - If x is −0 and y is +0, return true.
-    ...
+....
+- If x is +0 and y is −0, return true.
+- If x is −0 and y is +0, return true.
+...
 ```
 
 A *Reliable check for Negative Zero* is the following:
