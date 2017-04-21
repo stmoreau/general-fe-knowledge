@@ -2,7 +2,7 @@
 
 Abstract operations (e.g. ToString)
 
-__ToString__ examples
+`__ToString__` examples
 ```
             null  "null"
        undefined  "undefined"
@@ -26,7 +26,7 @@ __Aside__
 Javascript spec:  
 > Edition 5 clarifies the fact that a trailing comma at the end of an ArrayInitialiser does not add to the length of the array
 
-__ToNumber__ examples
+`__ToNumber__` examples
 ```
               ""  0
              "0"  0
