@@ -1,6 +1,6 @@
-## Coercion
+## Abstract Operations
 
-Abstract operations (e.g. ToString)
+Understanding of abstract operations (e.g. ToString) is essential to understand coercion!
 
 `ToString` examples
 ```

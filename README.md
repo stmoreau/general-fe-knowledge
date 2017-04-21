@@ -10,4 +10,6 @@ You can follow the order in which I wrote them or just jump to the subject that 
 
 1. ["Primitive Types"](primitive-types.md)
 2. ["Natives"](natives.md)
-3. ["Coercion"](coercion.md)
+3. ["Abstract Operations"](abstract-operations.md)
+4. ["Explicit Coercion"](explicit-coercion.md)
+5. ["Implicit Coercion"](implicit-coercion.md)
