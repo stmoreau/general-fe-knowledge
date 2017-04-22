@@ -32,7 +32,7 @@ If you cannot recall such a situation go ahead and open the following HTML in yo
 	console.log("Hello World!");
 	console.log("Hello World!");
 	console.log("Hello World!");
-  console.log("Hello World!");
+	console.log("Hello World!");
 	console.log("Hello World!);
 </script>
 
