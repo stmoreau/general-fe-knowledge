@@ -13,3 +13,5 @@ You can follow the order in which I wrote them or just jump to the subject that 
 3. ["Abstract Operations"](abstract-operations.md)
 4. ["Explicit Coercion"](explicit-coercion.md)
 5. ["Implicit Coercion"](implicit-coercion.md)
+6. ["Javascript is a compiled language"](javascript-is-a-compiled-language.md)
+7. ["Scope"](scope.md)
