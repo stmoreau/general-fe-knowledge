@@ -19,3 +19,4 @@ You can follow the order in which I wrote them or just jump to the subject that 
 6. [Javascript is a Compiled Language](javascript-is-a-compiled-language.md)
 7. [Anonymous and Named Function Expressions](function-expressions.md)
 8. [Scope](scope.md)
+9. [Hoisting](hoisting.md)
