@@ -21,3 +21,4 @@ You can follow the order in which I wrote them or just jump to the subject that 
 8. [Scope](scope.md)
 9. [Hoisting](hoisting.md)
 10. [Closure](closure.md)
+11. [Modules](modules.md)
