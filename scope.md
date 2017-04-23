@@ -8,7 +8,7 @@ The program goes through a compile step and it is at the compile step that all t
 We like to think of it as a runtime thing but it is not that way.  
 Refer to [Javascript is a compiled language](javascript-is-a-compiled-language.md).
 
-### Javascript has almost only function scope
+### Javascript has almost only function Scope
 
 ```
 var foo = "bar";
@@ -33,3 +33,56 @@ One fact we have to remember about shadowing is that you cannot access the one a
 
 __TIP__  
 Always in your javascript files use `"use strict";`
+
+### Lexical and Dynamic Scope
+
+With static (lexical) scoping, the structure of the program source code determines what variables you are referring to.  
+With dynamic scoping, the runtime state of the program stack determines what variable you are referring to.
+
+One benefit of lexical scope is predictability that leads into optimization.
+
+```
+function foo() {
+  var bar = "bar";
+
+  function baz() {
+    console.log(bar); // lexical!
+  }
+  baz();
+}
+foo();
+```
+
+Things with dynamic scope are less predictable, but they are more flexible.
+
+```
+// theoretical dynamic scoping
+function foo() {
+  console.log(bar); // dynamic
+}
+
+function baz() {
+  var bar = "bar";
+  foo();
+}
+
+baz();
+```
+
+### Function Scoping
+
+```
+var foo = "foo";
+
+( function IIFE(bar){
+  var foo = "foo2";
+  console.log(foo); // "foo2"
+} )(foo);
+
+console.log(foo); // "foo" -- phew!
+```
+
+This pattern has a name and it's called an IIFE (Immediately Invoked Function Expression).  
+This pattern has the benefit that it creates a scope without polluting with names.
+
+`foo` is passed to the IIFE as a parameter but we can change its name so we can access it inside our IIFE with another name, in this case `bar`.
