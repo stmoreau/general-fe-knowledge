@@ -20,3 +20,4 @@ You can follow the order in which I wrote them or just jump to the subject that 
 7. [Anonymous and Named Function Expressions](function-expressions.md)
 8. [Scope](scope.md)
 9. [Hoisting](hoisting.md)
+10. [Closure](closure.md)
