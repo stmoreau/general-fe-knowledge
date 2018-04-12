@@ -1,4 +1,10 @@
 # Advanced Javascript Questions
 
 1. [What is the call stack?](call-stack.md)
-1. [`var` vs `let`](var-let.md)
+2. [`var` vs `let`](var-let.md)
+3. [What is Function Composition?](function-composition.md)
+4. [What are closures? (one sentence)](closures.md)
+5. [What are Higher order functions? (one sentence)](higher-order-functions.md)
+6. [What are the three phases of a compiler?](compiler.md)
+7. [What is variable shadowing?](shadowing.md)
+8. [Describe the steps that happen when a file is run. (in depth img)](in-depth.md)
