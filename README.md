@@ -23,3 +23,4 @@ You can follow the order in which I wrote them or just jump to the subject that 
 10. [Closure](closure.md)
 11. [Modules](modules.md)
 12. [This](this.md)
+13. [Frequent questions](questions/README.md)
