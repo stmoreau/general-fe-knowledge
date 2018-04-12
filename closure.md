@@ -6,21 +6,25 @@ Observational definition:
 ### Examples
 
 ```
-function foo() {
-  var bar = "bar";
+function outer() {
+  var counter = 0;
 
-  function baz() {
-    console.log(bar);
+  function inner() {
+    console.log(counter);
+    counter++;
   }
 
-  bam(baz);
+  return inner;
 }
 
-function bam(baz) {
-  baz();              // "bar"
-}
+var myFunc1 = outer();
+myFunc1();  // 0
+myFunc1();  // 1
+myFunc1();  // 2
 
-foo();
+var myFunc2 = outer();
+myFunc2();  // 0
+myFunc2();  // 1
 ```
 
 ```
