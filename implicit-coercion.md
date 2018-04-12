@@ -3,6 +3,7 @@
 Implicit: happens as a side effect of some other operations
 
 ### string <--> number
+
 ```
 var foo = "123";
 var baz = foo - 0;
@@ -26,7 +27,8 @@ The `-` operator (as well as `/`, `*` and `%`) is specifically designed to only 
 
 The `+` operator is overloaded and says if either one of my operants is already a string prefer string concatenation, otherwise do numeric addition.
 
-### * --> boolean
+### \* --> boolean
+
 ```
 var foo = "123";
 if(foo) {                 // yup
@@ -45,13 +47,13 @@ var baz = foo || "foo";
 baz;                      // "foo"
 ```
 
-__Explanation of `foo == false` returning true__  
+**Explanation of `foo == false` returning true**  
 `==` Prefers to compare numbers. So what is actually happening under the hood is that `ToNumber` abstract operation is invoked to `false` and it returns `0`.  
 So after that `0 == 0` happens.
 
-The `||` and `&&` are called __logical operators__ so in their original design they produced a logical value (true or false).  
+The `||` and `&&` are called **logical operators** so in their original design they produced a logical value (true or false).  
 This is not how these operators work in Javascript (or Python, or Ruby).  
-The `||` and `&&` are more like __selection operators__. They take two operants, they do a boolean coercion test against the first one and based on the result pick one of the two.
+The `||` and `&&` are more like **selection operators**. They take two operants, they do a boolean coercion test against the first one and based on the result pick one of the two.
 
 ```
 var foo = "123";
@@ -70,15 +72,17 @@ if (foo == false) {     // yup!
 
 `==` prefers to compare numbers like we said, so it invokes the `ToNumber` abstract operation to both `foo` and `true` and then it does `NaN == 1`.
 
-`foo == false` returns `true` on the last example because again `ToNumber` abstract operation is invoked to both `[]` and  `false`, so the comparison is `0 == 0`.
+`foo == false` returns `true` on the last example because again `ToNumber` abstract operation is invoked to both `[]` and `false`, so the comparison is `0 == 0`.
 
 Ask yourself
+
 1. Can either value be `true` or `false`?
 2. Can either value ever be `[]`, `""`, or `0`?
 
 In these cases I would suggest using `===` instead of `==`.
 
 ### Primitive <--> Native
+
 ```
 var foo = "123";
 foo.length;               // 3
@@ -93,11 +97,13 @@ typeof baz;               // "string"
 ### Coercive Equality `==` vs `===`
 
 First of all let's have a look at the specs:
+
 > 7.2.13 Abstract Equality Comparison
 >
 > The comparison x == y, where x and y are values, produces true or false. Such a comparison is performed as follows:
+>
 > 1. If Type(x) is the same as Type(y), then
->   a. Return the result of performing Strict Equality Comparison x === y.
+>    a. Return the result of performing Strict Equality Comparison x === y.
 > 2. If x is null and y is undefined, return true.
 > 3. If x is undefined and y is null, return true.
 > 4. If Type(x) is Number and Type(y) is String, return the result of the comparison x == ToNumber(y).
@@ -108,7 +114,7 @@ First of all let's have a look at the specs:
 > 9. If Type(x) is Object and Type(y) is either String, Number, or Symbol, return the result of the comparison ToPrimitive(x) == y.
 > 10. Return false.
 
-So:  
+So:
 
 ~~`==` checks value~~  
 ~~`===` checks value and type~~
@@ -155,7 +161,7 @@ if (typeof foo === "string") {                // yup
 What about the performance of `==` or `===`?
 
 Since the difference between them is that `==` allows coercion and `===` disallows coercion it seems that `==` is less performant than `===`.  
-If the types are the same though, `==` behaves exactly like `===` as we see in "Abstract Equality Comparison" in point 1.  
+If the types are the same though, `==` behaves exactly like `===` as we see in "Abstract Equality Comparison" in point 1.
 
 ```
 var x = 2;

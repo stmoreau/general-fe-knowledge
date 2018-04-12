@@ -3,6 +3,7 @@
 Understanding of abstract operations (e.g. ToString) is essential to understand coercion!
 
 `ToString` examples
+
 ```
             null  "null"
        undefined  "undefined"
@@ -22,11 +23,13 @@ Understanding of abstract operations (e.g. ToString) is essential to understand 
            {a:2}  "[object Object]"
 ```
 
-__Aside__  
-Javascript spec:  
+**Aside**  
+Javascript spec:
+
 > Edition 5 clarifies the fact that a trailing comma at the end of an ArrayInitialiser does not add to the length of the array
 
 `ToNumber` examples
+
 ```
               ""  0
              "0"  0
@@ -52,12 +55,11 @@ ToNumber(object)  ToPrimitive(number)
      [undefined]  0
          [1,2,3]  NaN
         [[[[]]]]  0
-
 ```
 
 Falsy : if you have a value and you dispatch the ToBoolean abstract operation on it, it will always produce false  
-examples and __only__ falsy values (__"", 0, +0, -0, null, NaN, false, undefined__)
+examples and **only** falsy values (**"", 0, +0, -0, null, NaN, false, undefined**)
 
 Truthy : something is a truthy value if it's not on the Falsy list
 
-__These rules only apply if the `ToBoolean` operation is invoked!__
+**These rules only apply if the `ToBoolean` operation is invoked!**

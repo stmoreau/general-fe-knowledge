@@ -1,6 +1,6 @@
 ## Hoisting
 
-Hoisting is a term you will not find in the JavaScript docs. Hoisting was __thought up__ as a general way of thinking about how execution context (specifically the creation and execution phases) work in JavaScript. But, hoisting can lead to misunderstandings. For example, hoisting teaches that variable and function declarations are physically moved to the top of your coding, but this is not what happens at all. What does happen is that variable and function declarations are put into memory during the compile phase, but stays exactly where you typed it in your coding.  
+Hoisting is a term you will not find in the JavaScript docs. Hoisting was **thought up** as a general way of thinking about how execution context (specifically the creation and execution phases) work in JavaScript. But, hoisting can lead to misunderstandings. For example, hoisting teaches that variable and function declarations are physically moved to the top of your coding, but this is not what happens at all. What does happen is that variable and function declarations are put into memory during the compile phase, but stays exactly where you typed it in your coding.
 
 ```
 a;          // ???
@@ -11,9 +11,10 @@ b;          // 2
 a;          // ???
 ```
 
-What happens in reality is the following:  
-- Compiler parses the code and finds two formally declared variables so it stores them
-- Then on the second run javascript basically sees this code
+What happens in reality is the following:
+
+* Compiler parses the code and finds two formally declared variables so it stores them
+* Then on the second run javascript basically sees this code
 
 ```
 a;

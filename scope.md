@@ -23,15 +23,15 @@ function baz(foo) {
 }
 ```
 
-The fact that we use the same name for a variable in the global scope and inside a function is called __shadowing__.  
+The fact that we use the same name for a variable in the global scope and inside a function is called **shadowing**.  
 One fact we have to remember about shadowing is that you cannot access the one above except if it's the global scope where we can do `window.foo;`
 
-- In the global scope we have `foo`, `bar`, `baz` and `bam`.  
-`bam` is in the global scope because since a `bam` variable is not formally declared in the scope of `baz` we have to go up one level (global scope) and if it is not formally declared there (which is not), go up again, but we can't because global is the last scope so if it doesn't exist javascript creates this variable `bam` for us.  
-- In the `bar` scope we have `foo` because it is formally declared in the function.  
-- In the `baz` scope we have `foo` because it is formally declared in the `baz` function, passed as a parameter.
+* In the global scope we have `foo`, `bar`, `baz` and `bam`.  
+  `bam` is in the global scope because since a `bam` variable is not formally declared in the scope of `baz` we have to go up one level (global scope) and if it is not formally declared there (which is not), go up again, but we can't because global is the last scope so if it doesn't exist javascript creates this variable `bam` for us.
+* In the `bar` scope we have `foo` because it is formally declared in the function.
+* In the `baz` scope we have `foo` because it is formally declared in the `baz` function, passed as a parameter.
 
-__TIP__  
+**TIP**  
 Always in your javascript files use `"use strict";`
 
 ### Lexical and Dynamic Scope

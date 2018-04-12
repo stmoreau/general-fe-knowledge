@@ -7,9 +7,11 @@ I don't think these are ~~Native Types~~, nor ~~Native Objects~~ (not really app
 **As a rule prefer literal expressions!**
 
 When we use Natives as Constructors they basically create an object around the value, so `new String('foo')` returns
+
 ```
 String0: "f"1: "o"2: "o"length: 3__proto__: String[[PrimitiveValue]]: "foo"
 ```
+
 This can be a problem because for example: 0 as a primitive value is falsy, 0 as a number object is truthy.
 
 Don't do `foo = new Array(1,2,3);`, do `foo = [1,2,3];`  

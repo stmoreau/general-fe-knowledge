@@ -5,7 +5,7 @@ Javascript is a ~~interpreted~~ compiled language.
 When people say javascript is not a compiled language, it's a dynamic interpreted language and they compare it to C++, or Java what they 're usually thinking of is the distribution model for the end result of the compilation.  
 They're usually thinking that the compiled language, I run it through a compiler and I produce some executable code on the outside and then I take that executable code and I distribute it.
 
-One of the __many__ ways to prove that Javascript is a compiled language:
+One of the **many** ways to prove that Javascript is a compiled language:
 
 Every Javascript developer has had a Javascript bug...  
 Some of these where syntactic errors (forgot a comma, left of a curly brace).  
@@ -40,4 +40,4 @@ If you cannot recall such a situation go ahead and open the following HTML in yo
 </html>
 ```
 
-The last `console.log("Hello World!);` is missing the ending `"` but if Javascript was a interpreted language  all the previous `console.log("Hello World!");` should be in the console. Instead we only see `Uncaught SyntaxError: Invalid or unexpected token`.
+The last `console.log("Hello World!);` is missing the ending `"` but if Javascript was a interpreted language all the previous `console.log("Hello World!");` should be in the console. Instead we only see `Uncaught SyntaxError: Invalid or unexpected token`.
