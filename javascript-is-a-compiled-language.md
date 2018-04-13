@@ -41,3 +41,6 @@ If you cannot recall such a situation go ahead and open the following HTML in yo
 ```
 
 The last `console.log("Hello World!);` is missing the ending `"` but if Javascript was a interpreted language all the previous `console.log("Hello World!");` should be in the console. Instead we only see `Uncaught SyntaxError: Invalid or unexpected token`.
+
+Another way of proving is by just opening the source code of V8, or Mozilla Spidermonkey.
+If we watch closely we'll see that there is a compiler in both of them.

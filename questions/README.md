@@ -1,4 +1,4 @@
-# Advanced Javascript Questions
+# Javascript Questions (reminders)
 
 1. [What is the call stack?](call-stack.md)
 2. [`var` vs `let`](var-let.md)
