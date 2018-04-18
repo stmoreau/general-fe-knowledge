@@ -29,3 +29,53 @@ So the value of the first `a` is `undefined` because it has been declared but ha
 The value of the first `b` is `undefined` because it has been declared but has no value at the moment.  
 Then `a` gets the value of `b`, which is `undefined` and `b` get the value of `2`.  
 So the second `b` obviously has the value `2`, but the `a` has still the value `undefined`.
+
+Example no2
+
+```
+var a = b();
+var c = d();
+a;           // ???
+c;           // ???
+
+function b() {
+  return c;
+}
+
+var d = function () {
+  return b();
+}
+```
+
+This block of code after compilation essentially becomes (not exactly, but has that behaviour):
+
+```
+function b() {
+  return c;
+}
+var a;
+var c;
+vad d;
+
+a = b();
+c = d();
+a;
+c;
+d = function () {
+  return b();
+}
+```
+
+JavaScript only hoists declarations, not initializations. If a variable is declared and initialized after using it, the value will be undefined. For example:
+
+```
+console.log(num); // Returns undefined
+var num;
+num = 6;
+```
+
+_Hoisting is adding your variable to the enclosing lexical scope._
+
+There is a misconception that `let` doesn't hoist, but technically both `var` and `let` hoist.
+Both `var` and `let` technically hoist, since they both add the variables to the enclosing lexical scope.
+The difference between them is that `var` also initializes the variables defaulting to `undefined`, while `let` doesn't do that second part.
