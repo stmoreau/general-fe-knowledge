@@ -58,14 +58,17 @@ var foo = (function() {
       publicAPI.baz();
     },
     baz: function() {
-      console.log("baz");
+      console.log(o);
     }
   };
+  var o = "baz";
   return publicAPI;
 })();
 
 foo.bar();      // "baz"
 ```
+
+Again `o` cannot be accessed outside of the function.
 
 ### Modern module pattern
 
