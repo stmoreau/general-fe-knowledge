@@ -2,11 +2,11 @@
 
 `let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the `var` keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
 
-```
-for (var i=1; i<=5; i++) {
+```js
+for (var i = 1; i <= 5; i++) {
   setTimeout(function() {
-    console.log("i : " + i);
-  },i*1000);
+    console.log('i : ' + i);
+  }, i * 1000);
 }
 ```
 
@@ -18,12 +18,12 @@ There are two reasons why:
 
 To create a new `i` every time we can either replace `var` with `let`, or use an `IIFE` like so:
 
-```
-for (var i=1; i<=5; i++) {
-  (function(i){
+```js
+for (var i = 1; i <= 5; i++) {
+  (function(i) {
     setTimeout(function() {
-      console.log("i : " + i);
-    },i*1000);
+      console.log('i : ' + i);
+    }, i * 1000);
   })(i);
 }
 ```

@@ -16,24 +16,24 @@ Downsides:
 
 ### What's not a module
 
-```
+```js
 var foo = {
-  o: { bar: "bar" },
+  o: { bar: 'bar' },
   bar() {
     console.log(this.o.bar);
   }
 };
 
-foo.bar();      // "bar"
+foo.bar(); // "bar"
 ```
 
 So everyone has access to `foo.o`.
 
 ### Classic module pattern
 
-```
+```js
 var foo = (function() {
-  var o = { bar: "bar" };
+  var o = { bar: 'bar' };
 
   return {
     bar: function() {
@@ -42,7 +42,7 @@ var foo = (function() {
   };
 })();
 
-foo.bar();      // "bar"
+foo.bar(); // "bar"
 ```
 
 In this way `o` cannot be accessed outside of the function.
@@ -51,7 +51,7 @@ In this way `o` cannot be accessed outside of the function.
 
 With this way we gain the benefit that we can access our "public API" internally.
 
-```
+```js
 var foo = (function() {
   var publicAPI = {
     bar: function() {
@@ -61,23 +61,23 @@ var foo = (function() {
       console.log(o);
     }
   };
-  var o = "baz";
+  var o = 'baz';
   return publicAPI;
 })();
 
-foo.bar();      // "baz"
+foo.bar(); // "baz"
 ```
 
 Again `o` cannot be accessed outside of the function.
 
 ### Modern module pattern
 
-```
-define("foo", function(){
-  var o = { bar: "bar" };
+```js
+define('foo', function() {
+  var o = { bar: 'bar' };
 
   return {
-    bar: function(){
+    bar: function() {
       console.log(o.bar);
     }
   };
@@ -88,20 +88,20 @@ define("foo", function(){
 
 foo.js
 
-```
-var o = { bar: "bar" };
+```js
+var o = { bar: 'bar' };
 
 export function bar() {
   return o.bar;
-};
+}
 ```
 
-```
-import { bar } from "foo.js";
+```js
+import { bar } from 'foo.js';
 
-bar();      // "bar"
+bar(); // "bar"
 
-import * as foo from "foo.js";
+import * as foo from 'foo.js';
 
-foo.bar();  //"bar"
+foo.bar(); //"bar"
 ```

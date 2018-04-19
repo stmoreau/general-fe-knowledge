@@ -4,7 +4,7 @@ Understanding of abstract operations (e.g. ToString) is essential to understand 
 
 `ToString` examples
 
-```
+```js
             null  "null"
        undefined  "undefined"
             true  "true"
@@ -30,7 +30,7 @@ Javascript spec:
 
 `ToNumber` examples
 
-```
+```js
               ""  0
              "0"  0
             "-0"  -0

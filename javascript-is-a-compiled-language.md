@@ -15,7 +15,7 @@ The Javascript engine compiled the code first and the compilation validated the 
 
 If you cannot recall such a situation go ahead and open the following HTML in your browser and open the console.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>

@@ -4,13 +4,13 @@ _Closure is when a function "remembers" its lexical scope even when the function
 
 Example
 
-```
-function outer(){
-    let counter =  0;
-    function inner(){
-        return counter++
-    }
-    return inner;
+```js
+function outer() {
+  let counter = 0;
+  function inner() {
+    return counter++;
+  }
+  return inner;
 }
 
 const myFunc = outer();

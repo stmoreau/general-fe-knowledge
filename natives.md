@@ -8,8 +8,8 @@ I don't think these are ~~Native Types~~, nor ~~Native Objects~~ (not really app
 
 When we use Natives as Constructors they basically create an object around the value, so `new String('foo')` returns
 
-```
-String0: "f"1: "o"2: "o"length: 3__proto__: String[[PrimitiveValue]]: "foo"
+```js
+String{0: "f",1: "o",2: "o",length: 3,__proto__: String,[[PrimitiveValue]]: "foo"}
 ```
 
 This can be a problem because for example: 0 as a primitive value is falsy, 0 as a number object is truthy.

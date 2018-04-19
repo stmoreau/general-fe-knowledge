@@ -4,23 +4,23 @@ Explicit: it's obvious from the code that you're doing it
 
 ### string <--> number
 
-```
-var foo = "123";
-var baz = parseInt(foo,10);
-baz;                        // 123
+```js
+var foo = '123';
+var baz = parseInt(foo, 10);
+baz; // 123
 
 baz = Number(foo);
-baz;                        // 123
+baz; // 123
 
-baz = +foo;                 // explicit?
-baz;                        // 123
+baz = +foo; // explicit?
+baz; // 123
 
 baz = 456;
 foo = baz.toString();
-foo;                        // "456"
+foo; // "456"
 
 foo = String(baz);
-foo;                        // "456"
+foo; // "456"
 ```
 
 `parseInt(string,radix)` goes parses the string and as soon as it finds a character that doesn't exist in base of radix it stops so for example `parseInt('15px', 10); // 15`. It stops when it finds `p` because it's not a character in base10 and returns `15`.
@@ -31,17 +31,17 @@ foo;                        // "456"
 
 ### \* --> boolean
 
-```
-var foo = "123";
+```js
+var foo = '123';
 var baz = Boolean(foo);
-baz;                        // true
+baz; // true
 
 baz = !!foo;
-baz;                        // true
+baz; // true
 
 // explicitly implicit
 baz = foo ? true : false;
-baz;                        // true
+baz; // true
 ```
 
 `Boolean(foo);` in my opinion communicates better the explicit coercion we are aiming for.
@@ -53,10 +53,10 @@ Then the other `!` negates it again to "undo" the first negation.
 **TIP**  
 If you want to check if a character is inside a value a good way is this one:
 
-```
-var foo = "foo";
+```js
+var foo = 'foo';
 // ~N -> -(N+1)
-if(~foo.indexOf("f")) {
-  alert("found it!");
+if (~foo.indexOf('f')) {
+  alert('found it!');
 }
 ```

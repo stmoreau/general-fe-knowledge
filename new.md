@@ -19,3 +19,6 @@ function newOperator(Constr, args) {
   return thisValue;
 }
 ```
+
+Line 1: The prototype of a `new` instance of a constructor `Constr` is `Constr.prototype`
+Line 2: The implementor of a constructor can override that the `new` operators returns `this`, by returning an object. This is useful when a constructor should return an instance of a sub-constructor.

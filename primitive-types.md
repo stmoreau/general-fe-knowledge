@@ -7,22 +7,22 @@ So a pragmatic definition of Primitive Type (which is mentioned in the JS spec f
 
 **Primitive types**
 
-1. **undefined** (it is not the same with “not defined”. Not defined in JS means not declared. undefined means the variable exists but doesn’t have any value at the moment)
-2. **string**
-3. **number**
-4. **boolean**
-5. **object**
-6. **symbol** (new in ECMAScript 6)
-7. **function** (not in the specs, not a real first class primitive type. It is actually a subset of the object type, mentioned as a _callable object_)
-8. **null** (not in the specs, definitely true that null is a primitive type. The fact that `typeof null; // “object”` is a bug admitted by **Brendan Eich** creator of the Javascript language several times. Bad thing is it cannot be fixed)
+1.  **undefined** (it is not the same with “not defined”. Not defined in JS means not declared. undefined means the variable exists but doesn’t have any value at the moment)
+2.  **string**
+3.  **number**
+4.  **boolean**
+5.  **object**
+6.  **symbol** (new in ECMAScript 6)
+7.  **function** (not in the specs, not a real first class primitive type. It is actually a subset of the object type, mentioned as a _callable object_)
+8.  **null** (not in the specs, definitely true that null is a primitive type. The fact that `typeof null; // “object”` is a bug admitted by **Brendan Eich** creator of the Javascript language several times. Bad thing is it cannot be fixed)
 
 **Primitive types: special values**
 
-1. **NaN**
-2. **Infinity, -Infinity**
-3. **null**
-4. **undefined (void)**
-5. **+0, -0**
+1.  **NaN**
+2.  **Infinity, -Infinity**
+3.  **null**
+4.  **undefined (void)**
+5.  **+0, -0**
 
 Let's have a look at **NaN**.  
 Supposedly NaN stands for “Not a Number”. Any time you try to take a value and convert it to a number and that conversion fails the resultant value is to tell you “this was an invalid number”.  
@@ -66,9 +66,9 @@ The explanation of `0 === -0; // true` from the JS specs is:
 
 A _Reliable check for Negative Zero_ is the following:
 
-```
+```js
 function isNeg0(x) {
-	return x===0 && (1/x)===-Infinity;
+  return x === 0 && 1 / x === -Infinity;
 }
 
 isNeg0(0 / -3); // true

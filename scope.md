@@ -10,16 +10,16 @@ Refer to [Javascript is a compiled language](javascript-is-a-compiled-language.m
 
 ### Javascript has almost only function Scope
 
-```
-var foo = "bar";
+```js
+var foo = 'bar';
 
 function bar() {
-  var foo = "baz";
+  var foo = 'baz';
 }
 
 function baz(foo) {
-  foo = "bam";
-  bam = "yay";
+  foo = 'bam';
+  bam = 'yay';
 }
 ```
 
@@ -41,9 +41,9 @@ With dynamic scoping, the runtime state of the program stack determines what var
 
 One benefit of lexical scope is predictability that leads into optimization.
 
-```
+```js
 function foo() {
-  var bar = "bar";
+  var bar = 'bar';
 
   function baz() {
     console.log(bar); // lexical!
@@ -55,14 +55,14 @@ foo();
 
 Things with dynamic scope are less predictable, but they are more flexible.
 
-```
+```js
 // theoretical dynamic scoping
 function foo() {
   console.log(bar); // dynamic
 }
 
 function baz() {
-  var bar = "bar";
+  var bar = 'bar';
   foo();
 }
 
@@ -71,13 +71,13 @@ baz();
 
 ### Function Scoping
 
-```
-var foo = "foo";
+```js
+var foo = 'foo';
 
-( function IIFE(bar){
-  var foo = "foo2";
+(function IIFE(bar) {
+  var foo = 'foo2';
   console.log(foo); // "foo2"
-} )(foo);
+})(foo);
 
 console.log(foo); // "foo" -- phew!
 ```

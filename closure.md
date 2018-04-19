@@ -5,7 +5,7 @@ Observational definition:
 
 ### Examples
 
-```
+```js
 function outer() {
   var counter = 0;
 
@@ -18,18 +18,18 @@ function outer() {
 }
 
 var myFunc1 = outer();
-myFunc1();  // 0
-myFunc1();  // 1
-myFunc1();  // 2
+myFunc1(); // 0
+myFunc1(); // 1
+myFunc1(); // 2
 
 var myFunc2 = outer();
-myFunc2();  // 0
-myFunc2();  // 1
+myFunc2(); // 0
+myFunc2(); // 1
 ```
 
-```
+```js
 function foo() {
-  var bar = "bar";
+  var bar = 'bar';
 
   return function() {
     console.log(bar);
@@ -37,29 +37,29 @@ function foo() {
 }
 
 function bam() {
-  foo()();          // "bar"
+  foo()(); // "bar"
 }
 
 bam();
 ```
 
-```
+```js
 function foo() {
-  var bar = "bar";
+  var bar = 'bar';
 
   setTimeout(function() {
     console.log(bar);
-  },1000);
+  }, 1000);
 }
 
 foo();
 ```
 
-```
+```js
 function foo() {
-  var bar = "bar";
+  var bar = 'bar';
 
-  $("#btn").click(function(evt) {
+  $('#btn').click(function(evt) {
     console.log(bar);
   });
 }
@@ -67,22 +67,22 @@ function foo() {
 foo();
 ```
 
-```
+```js
 function foo() {
   var bar = 0;
 
   setTimeout(function() {
     console.log(bar++);
-  },100);
+  }, 100);
   setTimeout(function() {
     console.log(bar++);
-  },200);
+  }, 200);
 }
 
-foo();    // 0 1
+foo(); // 0 1
 ```
 
-```
+```js
 function foo() {
   var bar = 0;
 
@@ -91,19 +91,19 @@ function foo() {
     console.log(bar++);
 
     setTimeout(function() {
-      console.log(bar+baz);
-    },200);
-  },100);
+      console.log(bar + baz);
+    }, 200);
+  }, 100);
 }
 
-foo();    // 0 2
+foo(); // 0 2
 ```
 
-```
-for (var i=1; i<=5; i++) {
+```js
+for (var i = 1; i <= 5; i++) {
   setTimeout(function() {
-    console.log("i : " + i);
-  },i*1000);
+    console.log('i : ' + i);
+  }, i * 1000);
 }
 ```
 
@@ -115,12 +115,12 @@ There are two reasons why:
 
 To create a new `i` every time we can either replace `var` with `let`, or use an `IIFE` like so:
 
-```
-for (var i=1; i<=5; i++) {
-  (function(i){
+```js
+for (var i = 1; i <= 5; i++) {
+  (function(i) {
     setTimeout(function() {
-      console.log("i : " + i);
-    },i*1000);
+      console.log('i : ' + i);
+    }, i * 1000);
   })(i);
 }
 ```
