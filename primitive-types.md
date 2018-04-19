@@ -35,11 +35,11 @@ But,
 `isNaN("foo”); // true` this is a bug because if you pass something that is not already a number to isNaN it is trying to convert this value to a number first and then test to see if it resulted into NaN. So by the time isNaN checks the value “foo” it's already NaN. Fatal flaw!  
 To fix that bug we can use the following:
 
-```
+```js
 if (!Number.isNaN) {
-	Number.isNaN = function isNaN(num){
-		return num != num;
-	}
+  Number.isNaN = function isNaN(num) {
+    return num != num;
+  };
 }
 ```
 
