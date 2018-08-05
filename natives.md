@@ -20,3 +20,6 @@ Don't do `foo = new Object(); foo.a = 1; foo.b = 2; foo.c = 3;` do `foo = { a:1,
 For RegExp prefer literal expression when possible `foo = /a*b/g;` but if you have to dynamically create that expression it's fine to use the Constructor form `new RegExp('a*b','g');`
 
 There is no date literal! So we have to use `foo = new Date();`. Most of the times we use `new Date()` because we want to get the current timestamp. There is a much better way to do that and this is `Date.now()`.
+
+> TIP: to check if a variable is an array use `el.constructor === Array`! It is more performant!
+> https://jsperf.com/instanceof-array-vs-array-isarray/33
