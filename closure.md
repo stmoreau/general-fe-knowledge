@@ -1,7 +1,7 @@
 ## Closure
 
 Observational definition:  
-**Closure is the ability of a a function to "remember" its lexical scope even when it is executed outside that lexical scope.**
+**Closure is the ability of a function to "remember" its lexical scope even when it is executed outside that lexical scope.**
 
 ### Examples
 
