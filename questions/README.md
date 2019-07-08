@@ -8,3 +8,4 @@
 6. [What are the three phases of a compiler?](compiler.md)
 7. [What is variable shadowing?](shadowing.md)
 8. [Describe the steps that happen when a file is run. (in depth img)](in-depth.md)
+9. [What happens when you type in a URL?](what-happens-when-you-type-url.md)
