@@ -24,4 +24,4 @@ You can follow the order in which I wrote them or just jump to the subject that 
 11. [Modules](modules.md)
 12. [`new` keyword](new.md)
 13. [This](this.md)
-14. [Frequent questions (reminders)](questions/README.md)
+14. [FE generic questions](questions/README.md)
