@@ -62,3 +62,35 @@ Again we can handle more write traffic now - three times more than before. But w
 - **Complexity**
 - **We have limited the data model** - there has to be a unique id
 - **We have limited data access patterns**
+
+## Consistent Hashing
+
+Let's say we wanted to build our coffee shop for scale from the ground up.
+
+So we are going to use Consistent Hashing often referred as Distributed Hash Table (DHT) or Dynamo-style database.
+
+So the strategy of consistent hashing is hashing the key of the key-value pair
+
+![distributed-systems-theory-4](resources/distributed-systems-theory-4.png)
+
+To be able to fix the problem of redundancy we can replicate the data in the next 2 nodes like so:
+
+![distributed-systems-theory-5](resources/distributed-systems-theory-5.png)
+
+By doing so we are creating a problem of **consitency** though.
+
+What if when there is an update one of the 3 nodes that were supposed to be updated is down?
+
+There is a formula that answers this question:
+
+> R + W > N
+
+R: number of replicas that agree on a read
+W: number of replicas that successfully take a write
+N: total number of replicas
+
+When to use Cassandra (which uses Consistent Hashing)?
+
+- **Scale**
+- **Transactional data** (loads of updates in the storage)
+- **Always on**
