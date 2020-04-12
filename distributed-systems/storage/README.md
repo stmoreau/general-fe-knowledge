@@ -89,7 +89,7 @@ The CAP Theorem has been mathematically proven and what it means is that **there
 
 In a distributed database, in the presence of a network partition, we have that decision to make. Am I gonna be available or am I gonna be consistent?
 
-## Distributed Transactions
+## Distributed Transactions
 
 **ACID Transactions characteristics**
 
