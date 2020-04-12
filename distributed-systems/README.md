@@ -22,7 +22,7 @@ This section will cover:
 
 Setting the scene in a coffee shop we are starting with a non-distributed Single Master storage where we store customers and their favorite coffee:
 
-![distributed-systems-theory-1](resources/distributed-systems-theory-1.png | width=300)
+<img src="resources/distributed-systems-theory-1.png" width="400"/>
 
 ## Read Replication
 
@@ -30,7 +30,7 @@ This is the first strategy used to scale a Single Master Database.
 
 We can create copies of the database that we have. So there is going to be the main one that will have the information which will then be replicated in the other two replicas of it when there is an update:
 
-![distributed-systems-theory-2](resources/distributed-systems-theory-2.png | width=300)
+<img src="resources/distributed-systems-theory-2.png" width="400"/>
 
 There is a problem here though. The 2 new replicas are not necessarily perfectly consistent with each other all the time.
 
@@ -51,7 +51,7 @@ This is the next step to scaling our storage when the previous does not work any
 
 We are going to split the databases in 3 and still have the same read replication model underneath each "master" database:
 
-![distributed-systems-theory-3](resources/distributed-systems-theory-3.png | width=300)
+<img src="resources/distributed-systems-theory-3.png" width="400"/>
 
 Now this again introduces a little bit more **complexity** because now somehow, I have to know, well I'm Tim, let me real quick sing the alphabet song. Okay I'm after N, so I'm in that head barista number three. I have to go there. So there has to be some layer that does that translation of the key and maps it onto a shard.
 
@@ -71,11 +71,11 @@ So we are going to use Consistent Hashing often referred as Distributed Hash Tab
 
 So the strategy of consistent hashing is hashing the key of the key-value pair
 
-![distributed-systems-theory-4](resources/distributed-systems-theory-4.png | width=300)
+<img src="resources/distributed-systems-theory-4.png" width="400"/>
 
 To be able to fix the problem of redundancy we can replicate the data in the next 2 nodes like so:
 
-![distributed-systems-theory-5](resources/distributed-systems-theory-5.png | width=300)
+<img src="resources/distributed-systems-theory-5.png" width="400"/>
 
 By doing so we are creating a problem of **consitency** though.
 
@@ -97,4 +97,4 @@ When to use Cassandra (which uses Consistent Hashing)?
 
 ## CAP Theorem
 
-![distributed-systems-theory-6](resources/distributed-systems-theory-6.png | width=300)
+<img src="resources/distributed-systems-theory-6.png" width="400"/>
