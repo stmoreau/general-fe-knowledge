@@ -98,3 +98,11 @@ When to use Cassandra (which uses Consistent Hashing)?
 ## CAP Theorem
 
 <img src="resources/distributed-systems-theory-6.png" width="400"/>
+
+C: **Consistency**\
+A: **Availability**\
+P: **Partition Tolerance**
+
+The CAP Theorem has been mathematically proven and what it means is that **there is no way to have all three**.
+
+In a distributed database, in the presence of a network partition, we have that decision to make. Am I gonna be available or am I gonna be consistent?
