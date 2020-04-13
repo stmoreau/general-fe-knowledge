@@ -13,7 +13,7 @@ Tanenbaum
 This section will cover:
 
 - **[Storage](storage/README.md)**: Relational/Mongo, Cassandra, HDFS
-- **Computation**: Hadoop, Spark, Storm -- WIP
-- **Synchronization**: NTP, vector clocks -- WIP
-- **Consensus**: Paxos, Zookeeper -- WIP
-- **Messaging**: Kafka -- WIP
+- **[Computation](computation/README.md)**: Hadoop, Spark, Storm (WIP)
+- **Synchronization**: NTP, vector clocks (WIP)
+- **Consensus**: Paxos, Zookeeper (WIP)
+- **Messaging**: Kafka (WIP)
