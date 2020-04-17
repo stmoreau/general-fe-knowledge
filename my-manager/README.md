@@ -9,8 +9,10 @@ This is a living document, which will change. Please let me know if you have any
 My role is to:
 
 - provide context
-- be accountable for the engineering team's decisions, progress and general success
-- engage, retain, and grow world-class talent (that's you!)
+- support you in your next steps / goals
+- challenge you
+- provide psychological safety
+- provide feedback
 
 I am **not** here to make all the decisions nor should I or should you let me.
 
